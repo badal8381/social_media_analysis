@@ -43,6 +43,7 @@ async def main(message: Message):
             .get("messages", [{}])[0]
             .get("message", "No response")
         )
-        await cl.Message(content=message).send()
+        await cl.Message(content=message, author="SocialGPT").send()
     else:
+        print(response.json())
         await cl.Message(content="Error communicating with the API").send()
