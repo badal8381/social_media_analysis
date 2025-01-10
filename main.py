@@ -45,5 +45,4 @@ async def main(message: Message):
         )
         await cl.Message(content=message, author="SocialGPT").send()
     else:
-        print(response.json())
         await cl.Message(content="Error communicating with the API").send()
